@@ -1,11 +1,11 @@
 # RP2040VCO
-Modified version of the RP2040 based VCO design by Hagiwo
+Modified version of the RP2040zero based VCO design by Hagiwo
 
 This repository contains my modified code and schematics for the RP2040zero based VCO 
 designed by Hagiwo - https://note.com/solder_state/n/nca6a1dec3921
 
 Key differences from the original hardware are the use of op-amp mixers on the CV and
-modulation inputs so only 2 analogue inputs are used on the RP2040 board (which means
+modulation inputs so only 2 analogue ports are used on the RP2040 board (which means
 an original Raspberry Pi Pico could be used) and a DC coupled output circuit using an
 additional op-amp stage to mix in the required DC offset voltage.
 
