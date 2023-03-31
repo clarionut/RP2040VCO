@@ -23,7 +23,7 @@ the circuit diagram and a proposed PCB layout. The schematic shows the input soc
 and potentiometers but not the switches or output socket. I like to have an accessible
 reset switch for microcontroller-based modules but there is no reset line broken out
 on the RP2040zero board I used. The PCB design and stripboard layout allow for a 
-flying lead from the board to the reset button on the RP2040zero.
+flying lead from the main board to the reset button on the RP2040zero.
 
 Note that I have NOT built the VCO using the Kicad PCB layout, so be sure to check it
 thoroughly before use!
