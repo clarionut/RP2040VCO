@@ -11,7 +11,19 @@ additional op-amp stage to mix in the required DC offset voltage.
 
 The code is modified to:
 - compile with the Seeed XIAO RP2040 or Arduino Mbed OS RP2040 cores in the Arduino IDE, instead of the earlephilhower/arduino-pico core
-- run using just two analogue inputs and ensure that there is no bleed-through of modulation into the frequency input
+- run using just two analogue inputs and ensure that there is no bleed-through of modulation input into the VCO frequency due to a lack of MUX settling time
 - use the on-board neopixel LED to indicate which waveform is selected
 - apply PWM modulation to square wave output rather than attempting wavefolding
 - attempt to debounce the waveform select button in software (not yet 100% reliable!)
+
+The schematics folder contains the modified circuit diagram, the stripboard layout I 
+used to build my version of the VCO and a Zip archive containing a Kicad project of 
+the circuit diagram and a proposed PCB layout. The schematic shows the input sockets
+and potentiometers but not the switches or output socket. I like to have an accessible
+reset switch for microcontroller-based modules but there is no reset line broken out
+on the RP2040zero board I used. The PCB design and stripboard layout allow for a 
+flying lead from the board to the reset button on the RP2040zero.
+
+Note that I have NOT built the VCO using the Kicad PCB layout, so be sure to check it
+thoroughly before use!
+
